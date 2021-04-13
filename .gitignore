@@ -1,0 +1,5 @@
+*.c
+main
+build
+debug
+release
