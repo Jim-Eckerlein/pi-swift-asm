@@ -1,5 +1,7 @@
 #!/bin/sh
 
-clang -c -o pi.o pi/pi.S
-swiftc main.swift -I . pi.o
+mkdir -p build
+
+clang -o build/pi.o pi/pi.S -c
+swiftc -o build/main main.swift -I . build/pi.o
 
